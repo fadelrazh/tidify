@@ -9,7 +9,7 @@ import { BaseProps } from '../../types'
 import { cn, createClassNameBuilder } from '../../utils'
 import { Button } from '../Button'
 import { Input } from '../Input'
-import { Menu, X, Home, Search, Heart, User, Settings, LogOut, ChevronDown, MapPin } from 'lucide-react'
+import { Menu, X, Home, Search, Heart, User, Settings, LogOut, ChevronDown } from 'lucide-react'
 import styles from './Navbar.module.css'
 
 const cx = createClassNameBuilder(styles)

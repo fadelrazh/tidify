@@ -71,7 +71,9 @@ export interface ModalHeaderProps extends BaseProps {
   onClose?: () => void
 }
 
-export interface ModalBodyProps extends BaseProps {}
+export interface ModalBodyProps extends BaseProps {
+  children?: React.ReactNode;
+}
 
 export interface ModalFooterProps extends BaseProps {
   /**
@@ -91,7 +93,7 @@ const ModalRoot = React.forwardRef<HTMLDivElement, ModalProps>(
       showCloseButton = true,
       closeOnOverlayClick = true,
       closeOnEscape = true,
-      footerAlignment = 'end',
+
       className,
       ...props
     },

@@ -7,7 +7,7 @@
 import React, { useState } from 'react'
 import { BaseProps } from '../../types'
 import { cn, createClassNameBuilder } from '../../utils'
-import { ChevronDown, Globe } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import styles from './TopBar.module.css'
 
 const cx = createClassNameBuilder(styles)

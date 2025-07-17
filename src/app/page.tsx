@@ -6,7 +6,15 @@
  */
 
 import { Button, Card, Layout, Modal, useModal, Input, Badge, Navbar, Hero, TopBar } from '@/fds'
-import { MapPin, Calendar, Users, Search, Star, Wifi, Car, UtensilsCrossed, Waves } from 'lucide-react'
+import { 
+  MapPin, 
+  Calendar, 
+  Users, 
+  Search, 
+  Star, 
+  ChevronDown, 
+  // Wifi, Car, UtensilsCrossed, Waves - removed unused imports
+} from 'lucide-react';
 
 export default function Home() {
   const bookingModal = useModal()
@@ -47,10 +55,15 @@ export default function Home() {
     }
   ]
 
-  const handleSearch = (searchData: any) => {
-    console.log('Search data:', searchData)
-    // Handle search logic here
-  }
+  const backgroundImages = [
+    '/hero-bg-1.jpg',
+    '/hero-bg-2.jpg', 
+    '/hero-bg-3.jpg'
+  ];
+
+  const handleSearch = (searchData: Record<string, unknown>) => {
+    console.log('Search data:', searchData);
+  };
 
   const handleNavigation = (action: string) => {
     console.log('Navigation action:', action)

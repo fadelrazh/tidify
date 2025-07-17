@@ -5,8 +5,8 @@
  * Comprehensive showcase of all FDS components and design tokens
  */
 
-import { Button, Card, Layout, Input, Badge, Modal, useModal } from '@/fds'
-import { Search, Calendar, Users, CheckCircle, AlertCircle } from 'lucide-react'
+import { Button, Card, Layout, Modal, useModal, Input, Badge } from '@/fds'
+import { Code, FileText, Palette, Box } from 'lucide-react'
 
 export default function DocsPage() {
   const bookingModal = useModal()
@@ -292,7 +292,7 @@ export default function DocsPage() {
                   <Input 
                     label="Search" 
                     placeholder="Search accommodations..."
-                    startIcon={<Search size={16} />}
+                    startIcon={<Code size={16} />}
                   />
                 </div>
 
@@ -325,7 +325,7 @@ export default function DocsPage() {
                     state="success"
                     helperText="Username is available"
                     defaultValue="fadel_user"
-                    endIcon={<CheckCircle size={16} />}
+                    endIcon={<Box size={16} />}
                   />
                 </div>
 
@@ -480,10 +480,10 @@ export default function DocsPage() {
                 flexWrap: 'wrap', 
                 gap: 'var(--spacing-3)' 
               }}>
-                <Badge variant="primary" icon={<Search size={12} />}>4.9 Rating</Badge>
+                <Badge variant="primary" icon={<Code size={12} />}>4.9 Rating</Badge>
                 <Badge variant="success" dot>Online</Badge>
-                <Badge variant="info" icon={<Users size={12} />}>Villa</Badge>
-                <Badge variant="warning" icon={<Calendar size={12} />}>Bali</Badge>
+                <Badge variant="info" icon={<Box size={12} />}>Villa</Badge>
+                <Badge variant="warning" icon={<FileText size={12} />}>Bali</Badge>
               </div>
             </Card.Body>
           </Card>
@@ -698,7 +698,7 @@ export default function DocsPage() {
                  label="Check-in Date"
                  type="text"
                  placeholder="Select date"
-                 startIcon={<Calendar size={16} />}
+                 startIcon={<Code size={16} />}
                />
              </div>
              <div style={{ marginBottom: 'var(--spacing-4)' }}>
@@ -706,7 +706,7 @@ export default function DocsPage() {
                  label="Check-out Date"
                  type="text"
                  placeholder="Select date"
-                 startIcon={<Calendar size={16} />}
+                 startIcon={<Code size={16} />}
                />
              </div>
              <div style={{ marginBottom: 'var(--spacing-4)' }}>
@@ -714,7 +714,7 @@ export default function DocsPage() {
                  label="Number of Guests"
                  type="number"
                  placeholder="2"
-                 startIcon={<Users size={16} />}
+                 startIcon={<Box size={16} />}
                />
             </div>
             <div style={{ marginBottom: 'var(--spacing-4)' }}>
@@ -749,7 +749,7 @@ export default function DocsPage() {
             <Button variant="secondary" onClick={confirmModal.close}>
               Cancel
             </Button>
-            <Button variant="error" onClick={confirmModal.close}>
+            <Button variant="danger" onClick={confirmModal.close}>
               Confirm Delete
             </Button>
           </Modal.Footer>

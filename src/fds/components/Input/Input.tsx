@@ -86,11 +86,6 @@ export interface InputProps extends Omit<ComponentProps, 'children'> {
    * Blur handler
    */
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void
-  
-  /**
-   * HTML input props
-   */
-  [key: string]: any
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(

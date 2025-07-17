@@ -8,7 +8,7 @@ export interface BaseProps {
 }
 
 export type Size = 'sm' | 'md' | 'lg'
-export type Variant = 'primary' | 'secondary' | 'ghost' | 'outline' | 'accent'
+export type Variant = 'primary' | 'secondary' | 'ghost' | 'outline' | 'accent' | 'danger'
 export type Color = 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'neutral' | 'info'
 export type BorderRadius = 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full'
 

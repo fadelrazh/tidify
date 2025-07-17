@@ -8,8 +8,7 @@ import React, { useState, useEffect } from 'react'
 import { BaseProps } from '../../types'
 import { cn, createClassNameBuilder } from '../../utils'
 import { Button } from '../Button'
-import { Input } from '../Input'
-import { Badge } from '../Badge'
+
 import { Search, MapPin, Calendar, Users, Star, ChevronLeft } from 'lucide-react'
 import styles from './Hero.module.css'
 
@@ -65,7 +64,7 @@ export const Hero = React.forwardRef<HTMLElement, HeroProps>(
   (
     {
       title = "Sewa Villa & Apartemen, atau Cobain Nginep Seru di",
-      subtitle = "",
+
       backgroundImages = [
         "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
         "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
@@ -89,22 +88,22 @@ export const Hero = React.forwardRef<HTMLElement, HeroProps>(
     // Typing animation states
     const [currentWordIndex, setCurrentWordIndex] = useState(0)
     const [displayedText, setDisplayedText] = useState('')
-    const [isTyping, setIsTyping] = useState(true)
+    const [isTyping] = useState(true)
     const [isDeleting, setIsDeleting] = useState(false)
 
     // Background carousel state
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-    const typingWords = [
-      'Cottage',
-      'Villa',
-      'Hotel',
-      'Resort',
-      'Apartemen'
-    ]
-
     // Typing animation effect
     useEffect(() => {
+      const typingWords = [
+        'Cottage',
+        'Villa',
+        'Hotel',
+        'Resort',
+        'Apartemen'
+      ]
+      
       const currentWord = typingWords[currentWordIndex]
       
       const typingSpeed = isDeleting ? 100 : 150
@@ -124,7 +123,7 @@ export const Hero = React.forwardRef<HTMLElement, HeroProps>(
       }, typingSpeed)
 
       return () => clearTimeout(timer)
-    }, [currentWordIndex, displayedText, isDeleting, typingWords])
+    }, [currentWordIndex, displayedText, isDeleting])
 
     // Background carousel effect
     useEffect(() => {

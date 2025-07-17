@@ -47,18 +47,18 @@ export interface ButtonProps extends ComponentProps {
    * Click handler
    */
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
-  
+
   /**
-   * HTML button props
+   * Inline styles
    */
-  [key: string]: any
+  style?: React.CSSProperties
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
-      size = 'md',
+      size = 'md', 
       variant = 'primary',
       rounded = 'md',
       type = 'button',
