@@ -1,0 +1,57 @@
+/**
+ * FDS Layout Component Styles
+ */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
+}
+
+.container.maxWidth-sm {
+    max-width: 640px;
+}
+
+.container.maxWidth-md {
+    max-width: 768px;
+}
+
+.container.maxWidth-lg {
+    max-width: 1024px;
+}
+
+.container.maxWidth-xl {
+    max-width: 1280px;
+}
+
+.container.maxWidth-2xl {
+    max-width: 1536px;
+}
+
+.container.maxWidth-full {
+    max-width: none;
+}
+
+.container.padding {
+    padding: var(--spacing-4);
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding: 0 var(--spacing-6);
+    }
+
+    .container.padding {
+        padding: var(--spacing-6);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-8);
+    }
+
+    .container.padding {
+        padding: var(--spacing-8);
+    }
+}

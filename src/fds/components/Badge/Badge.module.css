@@ -1,0 +1,235 @@
+/**
+ * FDS Badge Component Styles
+ */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-1);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    white-space: nowrap;
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+}
+
+/* Sizes */
+.small {
+    padding: var(--spacing-1) var(--spacing-2);
+    font-size: var(--font-size-xs);
+    height: 1.25rem;
+}
+
+.medium {
+    padding: var(--spacing-1) var(--spacing-3);
+    font-size: var(--font-size-sm);
+    height: 1.5rem;
+}
+
+.large {
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--font-size-base);
+    height: 2rem;
+}
+
+/* Border Radius */
+.rounded-none {
+    border-radius: 0;
+}
+
+.rounded-sm {
+    border-radius: var(--radius-sm);
+}
+
+.rounded-md {
+    border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+    border-radius: var(--radius-lg);
+}
+
+.rounded-xl {
+    border-radius: var(--radius-xl);
+}
+
+.rounded-2xl {
+    border-radius: var(--radius-2xl);
+}
+
+.rounded-full {
+    border-radius: var(--radius-full);
+}
+
+/* Variants */
+.primary {
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-800);
+    border: 1px solid var(--color-primary-200);
+}
+
+.secondary {
+    background-color: var(--color-neutral-100);
+    color: var(--color-neutral-700);
+    border: 1px solid var(--color-neutral-200);
+}
+
+.success {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.warning {
+    background-color: #fef3c7;
+    color: #d97706;
+    border: 1px solid #fde68a;
+}
+
+.error {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.info {
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-700);
+    border: 1px solid var(--color-primary-100);
+}
+
+.accent {
+    background-color: var(--color-accent-100);
+    color: var(--color-accent-800);
+    border: 1px solid var(--color-accent-200);
+}
+
+/* Solid variants */
+.primarySolid {
+    background-color: var(--color-primary-500);
+    color: white;
+    border: 1px solid var(--color-primary-500);
+}
+
+.secondarySolid {
+    background-color: var(--color-neutral-500);
+    color: white;
+    border: 1px solid var(--color-neutral-500);
+}
+
+.successSolid {
+    background-color: var(--color-success);
+    color: white;
+    border: 1px solid var(--color-success);
+}
+
+.warningSolid {
+    background-color: var(--color-warning);
+    color: white;
+    border: 1px solid var(--color-warning);
+}
+
+.errorSolid {
+    background-color: var(--color-error);
+    color: white;
+    border: 1px solid var(--color-error);
+}
+
+.infoSolid {
+    background-color: var(--color-primary-600);
+    color: white;
+    border: 1px solid var(--color-primary-600);
+}
+
+.accentSolid {
+    background-color: var(--color-accent-500);
+    color: var(--color-accent-900);
+    border: 1px solid var(--color-accent-500);
+}
+
+/* Outline variants */
+.primaryOutline {
+    background-color: transparent;
+    color: var(--color-primary-600);
+    border: 1px solid var(--color-primary-300);
+}
+
+.secondaryOutline {
+    background-color: transparent;
+    color: var(--color-neutral-600);
+    border: 1px solid var(--color-neutral-300);
+}
+
+.successOutline {
+    background-color: transparent;
+    color: #059669;
+    border: 1px solid #10b981;
+}
+
+.warningOutline {
+    background-color: transparent;
+    color: #d97706;
+    border: 1px solid var(--color-warning);
+}
+
+.errorOutline {
+    background-color: transparent;
+    color: var(--color-error);
+    border: 1px solid var(--color-error);
+}
+
+.infoOutline {
+    background-color: transparent;
+    color: var(--color-primary-600);
+    border: 1px solid var(--color-primary-400);
+}
+
+.accentOutline {
+    background-color: transparent;
+    color: var(--color-accent-600);
+    border: 1px solid var(--color-accent-400);
+}
+
+/* Interactive badge */
+.interactive {
+    cursor: pointer;
+}
+
+.interactive:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.interactive:active {
+    transform: translateY(0);
+}
+
+/* Badge with dot */
+.dot {
+    position: relative;
+}
+
+.dot::before {
+    content: '';
+    position: absolute;
+    left: var(--spacing-2);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+.dotPadding {
+    padding-left: calc(var(--spacing-2) + 6px + var(--spacing-1));
+}
+
+/* Icon spacing */
+.hasIcon {
+    gap: var(--spacing-1);
+}
+
+/* Light theme only - colorful badges for accommodation features */

@@ -1,0 +1,227 @@
+/**
+ * FDS Modal Component Styles
+ */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: var(--spacing-4);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.overlay.open {
+    opacity: 1;
+}
+
+.modal {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.95) translateY(20px);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal.open {
+    transform: scale(1) translateY(0);
+}
+
+/* Modal Sizes */
+.small {
+    width: 100%;
+    max-width: 400px;
+}
+
+.medium {
+    width: 100%;
+    max-width: 600px;
+}
+
+.large {
+    width: 100%;
+    max-width: 800px;
+}
+
+.extraLarge {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.fullWidth {
+    width: 95vw;
+    max-width: none;
+}
+
+/* Modal Header */
+.header {
+    padding: var(--spacing-6);
+    border-bottom: 1px solid var(--color-neutral-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    padding: var(--spacing-2);
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.closeButton:hover {
+    background-color: var(--color-neutral-100);
+    color: var(--color-text-primary);
+}
+
+.closeButton:focus {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+}
+
+.closeIcon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Modal Body */
+.body {
+    padding: var(--spacing-6);
+    overflow-y: auto;
+    flex: 1;
+}
+
+.body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.body::-webkit-scrollbar-track {
+    background: var(--color-neutral-100);
+    border-radius: var(--radius-full);
+}
+
+.body::-webkit-scrollbar-thumb {
+    background: var(--color-neutral-300);
+    border-radius: var(--radius-full);
+}
+
+.body::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neutral-400);
+}
+
+/* Modal Footer */
+.footer {
+    padding: var(--spacing-6);
+    border-top: 1px solid var(--color-neutral-200);
+    display: flex;
+    gap: var(--spacing-3);
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.footer.center {
+    justify-content: center;
+}
+
+.footer.start {
+    justify-content: flex-start;
+}
+
+.footer.spaceBetween {
+    justify-content: space-between;
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.95) translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.overlay.entering {
+    animation: modalFadeIn var(--transition-base);
+}
+
+.modal.entering {
+    animation: modalSlideIn var(--transition-base);
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+    .overlay {
+        padding: var(--spacing-2);
+    }
+
+    .modal {
+        max-height: 95vh;
+        border-radius: var(--radius-lg);
+    }
+
+    .header {
+        padding: var(--spacing-4);
+    }
+
+    .body {
+        padding: var(--spacing-4);
+    }
+
+    .footer {
+        padding: var(--spacing-4);
+        flex-direction: column-reverse;
+    }
+
+    .footer.spaceBetween {
+        flex-direction: column-reverse;
+    }
+
+    .title {
+        font-size: var(--font-size-lg);
+    }
+}
+
+/* Light theme only - clean and accessible modals */

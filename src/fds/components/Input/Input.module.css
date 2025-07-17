@@ -1,0 +1,158 @@
+/**
+ * FDS Input Component Styles
+ */
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+.required {
+    color: var(--color-error);
+}
+
+.inputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-primary);
+    background-color: #f8f9fd;
+    color: var(--color-text-primary);
+    transition: all var(--transition-base);
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.input:focus {
+    background-color: #eff1fe;
+    box-shadow: 0 0 0 3px rgb(14 165 233 / 0.1);
+}
+
+.input:disabled {
+    background-color: var(--color-neutral-100);
+    color: var(--color-text-muted);
+    cursor: not-allowed;
+}
+
+/* Sizes */
+.small {
+    padding: 0.75rem 1rem;
+    font-size: var(--font-size-sm);
+}
+
+.medium {
+    padding: 1rem 1.25rem;
+    font-size: var(--font-size-base);
+}
+
+.large {
+    padding: 1.25rem 1.5rem;
+    font-size: var(--font-size-lg);
+}
+
+/* Border Radius */
+.rounded-none {
+    border-radius: 0;
+}
+
+.rounded-sm {
+    border-radius: var(--radius-sm);
+}
+
+.rounded-md {
+    border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+    border-radius: var(--radius-lg);
+}
+
+.rounded-xl {
+    border-radius: var(--radius-xl);
+}
+
+.rounded-2xl {
+    border-radius: var(--radius-2xl);
+}
+
+.rounded-full {
+    border-radius: var(--radius-full);
+}
+
+/* States */
+.error {
+    border-color: var(--color-error);
+}
+
+.error:focus {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 3px rgb(239 68 68 / 0.1);
+}
+
+.success {
+    border-color: var(--color-success);
+}
+
+.success:focus {
+    border-color: var(--color-success);
+    box-shadow: 0 0 0 3px rgb(34 197 94 / 0.1);
+}
+
+/* Icons */
+.startIcon {
+    position: absolute;
+    left: 1rem;
+    color: #6b7280;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.endIcon {
+    position: absolute;
+    right: 1rem;
+    color: #6b7280;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hasStartIcon {
+    padding-left: calc(1rem + 1.125rem + 0.75rem);
+}
+
+.hasEndIcon {
+    padding-right: calc(1rem + 1.125rem + 0.75rem);
+}
+
+/* Helper Text */
+.helperText {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.errorText {
+    color: var(--color-error);
+}
+
+.successText {
+    color: var(--color-success);
+}
+
+/* Light theme only - clean and accessible for forms */
