@@ -31,6 +31,11 @@ export interface CardProps extends BaseProps {
    * Click handler for interactive cards
    */
   onClick?: (event: React.MouseEvent<HTMLDivElement>) => void
+
+  /**
+   * Inline styles
+   */
+  style?: React.CSSProperties
 }
 
 export interface CardHeaderProps extends BaseProps {
@@ -45,6 +50,11 @@ export interface CardBodyProps extends BaseProps {
    * Padding size for the body
    */
   padding?: 'sm' | 'md' | 'lg'
+
+  /**
+   * Inline styles
+   */
+  style?: React.CSSProperties
 }
 
 export interface CardFooterProps extends BaseProps {
